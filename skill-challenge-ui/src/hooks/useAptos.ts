@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useWallet } from '../contexts/WalletContext';
 
 export const useAptos = () => {
@@ -15,7 +15,6 @@ export const useAptos = () => {
     setError(null);
 
     try {
-      // Call the init_account function from the Staking module
       const payload = {
         type: 'entry_function_payload',
         function: 'SkillVerification::Staking::init_account',
@@ -23,7 +22,6 @@ export const useAptos = () => {
         arguments: [],
       };
 
-      // This would be replaced with actual transaction submission
       console.log('Initializing account with payload:', payload);
       
       // Simulate API call

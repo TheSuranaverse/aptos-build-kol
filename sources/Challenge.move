@@ -2,9 +2,8 @@ module SkillVerification::Challenge {
 
     use std::signer;
     use std::string;
-    use std::option;
-    use aptos_std::coin;
-    use aptos_std::aptos_coin::AptosCoin;
+    use aptos_framework::coin;
+    use aptos_framework::aptos_coin::AptosCoin;
 
     struct ChallengeState has key {
         target: address,
@@ -36,7 +35,6 @@ module SkillVerification::Challenge {
             // implement: burn NFT or slash staker
         }
     }
-
 
     public fun get_status(address: address): string::String acquires ChallengeState {
         let c = borrow_global<ChallengeState>(address);
