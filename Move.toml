@@ -1,0 +1,16 @@
+[package]
+name = "my-dap"
+version = "1.0.0"
+authors = []
+
+[addresses]
+SkillVerification = "0x46ac3374a32351588048ee43cdaf4a111ba4596a92c6c0c90e8b1258fd8dab51"
+
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-framework.git"
+rev = "mainnet"
+subdir = "aptos-framework"
+
+[dev-dependencies]
